@@ -1,0 +1,131 @@
+.comments {
+background-color: #f8f8f8;
+padding: 70px 0;
+  // .comments__wrapper
+
+  &__wrapper {
+  }
+}
+
+.commentsSwiper {
+  @media (max-width: $bp-m) {
+    min-height: 40vh;
+  }
+  .swiper-wrapper {
+    &__inner{
+      max-width: 970px;
+      margin: 0 auto;
+      z-index: -1 !important;
+      @media (max-width: $bp-l) {
+      }
+    }
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    @media (max-width: $bp-l) {
+      justify-content: center;
+    }
+    @media (max-width: $bp-m) {
+      align-items: start;
+    }
+  
+    // .swiper-slide__img-box
+  
+    &__img-box {
+      padding: 40px;
+      border: 3px solid $color-main;
+      @media (max-width: $bp-m) {
+        padding: 15px;
+      }
+      @media (max-width: $bp-s) {
+        display: none;
+      }
+      img{
+        width: 64px;
+        max-width: inherit;
+        @media (max-width: $bp-m) {
+          width: 34px;
+        }
+      }
+    }
+  
+    // .swiper-slide__content
+  
+    &__content {
+      margin-left: 60px;
+      max-width: 760px;
+      @media (max-width: $bp-l) {
+        max-width: 460px;
+      }
+      @media (max-width: $bp-m) {
+        margin-left: 30px;
+      }
+    }
+  
+    // .swiper-slide__content-text
+  
+    &__content-text {
+      @extend %roboto;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px / 24px * 100%;
+      color: #999999;
+      @media (max-width: $bp-m) {
+        font-size: 16px;
+      }
+    }
+  
+    // .swiper-slide__content-author
+  
+    &__content-author {
+      display: flex;
+      align-items: center;
+      @extend %kaus;
+      font-weight: 400;
+      font-size: 24px;
+      color: #333333;
+      position: relative;
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 60px;
+        height: 3px;
+        background-color: $color-accent;
+        margin-right: 8px;
+      }
+    }
+
+  }
+  .commentsSwiper-arrow-prev,
+  .commentsSwiper-arrow-next{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    @media (max-width: $bp-m) {
+      top: auto;
+      bottom: 20px;
+    }
+  }
+  .commentsSwiper-arrow-prev{
+    left: 0;
+    @media (max-width: $bp-m) {
+      left: 45%;
+      transform: translateX(-100%);
+    }
+  }
+  .commentsSwiper-arrow-next{
+    right: 0;
+    @media (max-width: $bp-m) {
+      right: 45%;
+      transform: translateX(100%);
+    }
+  }
+  .swiper-button-disabled svg>path{
+    fill: #cccccc;
+  }
+  
+}

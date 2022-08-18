@@ -1,0 +1,81 @@
+*{
+  transition: all .3s ease;
+}
+html{
+  font-size: 10px;
+}
+body{
+  overflow-x: hidden;
+  background: #ffffff;
+}
+.title__inner{
+  text-align: center;
+}
+.title{
+  @extend %mont;
+  font-weight: 700;
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+  position: relative;
+  &::after{
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    background-color: $color-accent;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.pretitle{
+  @extend %kaus;
+  display: inline-block;
+  font-size: 24px;
+  color: #333333;
+  text-transform:uppercase;
+  margin-bottom: 20px;
+}
+p{
+  @extend %roboto;
+  font-weight: 400;
+}
+// Header Fixed
+.nav--fixed .header {
+  margin-top: -36px;
+}
+
+.nav--fixed .header {
+  padding: 14px;
+  width: 100%;
+  position: fixed;
+  background-color: $color-accent;
+  margin-top: 0;
+  top: 0;
+}
+.nav--fixed.nav--hidden .header{
+  margin-top: -36px;
+}
+
+.nav--hidden .header {
+  opacity: 0;
+  visibility: hidden;
+}// Container
+.container{
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  @media (max-width:$bp-xl) {
+      max-width: 970px;
+  }
+  @media (max-width:$bp-m) {
+      max-width: 750px;
+      padding: 0 10px;
+  }
+  @media (max-width:$bp-s) {
+      max-width: none;
+      padding: 0 10px;
+  }
+}
+// Container

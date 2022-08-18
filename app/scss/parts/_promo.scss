@@ -1,0 +1,20 @@
+.promo {
+  padding: 70px 0;
+  background-color: #f8f8f8;
+  @media (max-width: $bp-m) {
+    padding: 0 0 35px;
+  }
+  // .promo__wrapper
+
+  &__wrapper {
+  }
+
+  // .promo__img
+
+  &__img {
+    @media (max-width: $bp-l) {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+}

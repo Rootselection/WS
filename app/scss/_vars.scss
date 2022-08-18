@@ -1,0 +1,37 @@
+$color-main: #95e1d3;
+$color-accent: #f38181;
+$text-accent: #fbde8a;
+$fs-title: 24px;
+$fs-text: 16px;
+
+%btn-null{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+// Break Points
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1170px;
+$bp-xl: $maxWidthContainer + 12px;
+$bp-l: 992px;
+$bp-m: 768px;
+$bp-s: 375px;
+
+// Break Points
+
+%roboto{
+  font-family: 'Roboto', sans-serif;
+}
+%kaus{
+  font-family: 'Kaushan Script', cursive;
+}
+%mont{
+  font-family: 'Montserrat', sans-serif;
+}
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

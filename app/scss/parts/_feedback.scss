@@ -1,0 +1,148 @@
+.feedback {
+  padding: 115px 0 125px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: $bp-m) {
+    padding: 65px 0 60px;
+  }
+  // .feedback__wrapper
+
+  .feedback--bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(240,240,240,0.8);
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  // .feedback__title-inner
+
+  &__title-inner {
+    margin-bottom: 125px;
+    @media (max-width: $bp-m) {
+      margin-bottom: 65px;
+    }
+  }
+
+  // .feedback__inner
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  // .feedback__item
+
+  &__item {
+    width: 50%;
+    display: flex;
+    margin-bottom: 65px;
+    @media (max-width: $bp-l) {
+      width: 100%;
+      justify-content: center;
+    }
+    @media (max-width: $bp-m) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $bp-m) {
+      display: block;
+    }
+  }
+
+  // .feedback__item-avatar-box
+
+  &__item-avatar-box {
+    max-width: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: fit-content;
+    @media (max-width: $bp-m) {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .feedback__item-avatar
+
+  &__item-avatar {
+    width: inherit;
+  }
+
+  // .feedback__item-content
+
+  &__item-content {
+    margin-left: 30px;
+    max-width: 370px;
+    @media (max-width: $bp-m) {
+      margin-left: 0;
+    }
+
+  }
+
+  // .feedback__item-title
+
+  &__item-title {
+    @extend %mont;
+    font-weight: 400;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 16px;
+    @media (max-width: $bp-m) {
+      margin-bottom: 6px;
+    }
+  }
+
+  // .feedback__item-subtitle
+
+  &__item-subtitle {
+    display: inline-block;
+    @extend %roboto;
+    font-weight: 300;
+    font-style: italic;
+    color: #333333;
+    font-size: 15px;
+    margin-bottom: 50px;
+    position: relative;
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 3px;
+      background-color: $color-accent;
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+    }
+    @media (max-width: $bp-m) {
+      margin-bottom: 25px;
+    }
+  }
+
+  // .feedback__item-text
+
+  &__item-text {
+    @extend %roboto;
+    font-weight: 400;
+    color: #999999;
+    font-size: 15px;
+    line-height: 24px / 15px * 100%;
+    @media (max-width: $bp-m) {
+      font-size: 14px;
+    }
+    @media (max-width: $bp-s) {
+      font-size: 12px;
+    }
+  }
+}
+
